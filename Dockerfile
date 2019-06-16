@@ -1,4 +1,4 @@
-FROM aws/codebuild/standard:2.0-1.10.0
+FROM node:10
 
 ENV PORT=80
 
