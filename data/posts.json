@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 0,
+      "title": "The Sims 4 Reviewed!",
+      "content": "New to the series, the Sims display a range of emotions which influence your variety of decisions in the game. Emotions give you new choices that impact your Sims and shape their stories. You can now control how your Sims engage other Sims, objects and individual moments in the game. You control the brain, corpus, and now the heart of your Sims. The Sims you generate are full of life and are defined by, among other things, their unique personalities and their varying emotions.",
+      "author": "Mariano Quidiello",
+      "comments": [
+        {
+          "author": "Jesica Fera",
+          "content": "Great Review!"
+        },
+        {
+          "author": "Leandro Romero",
+          "content": "I didn't like it :("
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Battlefield 4",
+      "content": "Battlefield 4 is an action blockbuster that aims for unrivaled destruction. Fueled by Frostbite 3, Battlefield 4 allows you to demolish the buildings shielding your enemy. You will lead an assault from the back of a gun boat. Battlefield grants you the freedom to do more and be more while playing to your strengths and carving your own path to victory. Beyond its hallmark multiplayer, Battlefield 4 features an intense, dramatic character-driven campaign that starts with the evacuation of American VIPs from Shanghai and follows your squad's struggle to find its way home. Change the landscape in real-time with interactive environments that react to your every move. Dominate land, air and sea with all-new, intense water-based vehicular combat.",
+      "author": "John Peters",
+      "comments": [
+        {
+          "author": "Mariano Quidiello",
+          "content": "Thanks for contributing"
+        },
+        {
+          "author": "John Peters",
+          "content": "NP ;)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+extends default
+
+block content
+  div.container
+    each post in posts
+      div.post
+        h2
+          | #[a(href=`/post?id=${post.id}`) #{post.title}]
+        h4 Author: #{post.author}
+        p #{post.content}
+
+    div.addComment
+      h4 Add Review
+        div.form-group
+          label(for='name') Author:
+          input(type='text', placeholder='author', id='name')
+        div.form-group
+          label(for='title') Title:
+          input(type='text', placeholder='title', id='title')
+        div.form-group
+          label(for='content') Review:
+          input(type='text', placeholder='Review text', id='content')
+        div.form-group
+          input(type='button', value="Send", id="addReview")
+
+        script.
+          $('#addReview').click(function () {
+            var post = {
+              "id": #{posts.length},
+              "author": $('#name').val(),
+              "title": $('#title').val(),
+              "content": $('#content').val()
+            }
+            $.ajax({
+              url: `http://localhost:7000/posts`,
+              type: 'POST',
+              data: post,
+              success: function () {
+                location.reload()
+              },
+              error: function (error) {
+                console.log(error)
+              }
+            });
+          });

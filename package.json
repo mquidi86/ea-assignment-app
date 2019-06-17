@@ -1,0 +1,19 @@
+{
+  "name": "blog-test",
+  "version": "1.0.0",
+  "description": "Website for reviews",
+  "scripts": {
+    "start": "concurrently \"nodemon webserver.js\" \"nodemon apiRest.js\" "
+  },
+  "author": "Mariano Quidiello",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "pug": "^2.0.3",
+    "request": "*",
+    "concurrently": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}

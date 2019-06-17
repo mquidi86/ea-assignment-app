@@ -1,9 +1,13 @@
 FROM node:10
 
-ENV PORT=80
+ENV PORT=8000
 
-EXPOSE $PORT
+EXPOSE 7000
 
-COPY app.js /app/
+EXPOSE 8000
 
-CMD ["node", "/app/app.js"]
+COPY * /app/
+
+CMD ["npm", "install"]
+
+CMD ["npm", "start"]

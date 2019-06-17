@@ -1,0 +1,47 @@
+extends default
+
+block content
+  div.container
+      div.post
+        h2
+          | #{post.title}
+        h4 by #{post.author}
+        p #{post.content}
+      div#comments
+        h3 Comments
+        each comment in comments
+          p
+            strong #{comment.author} says:
+            |  #{comment.content}
+
+      div.addComment
+        h4 Add Comment
+          div.form-group
+            label(for='name') Author:
+            input(type='text', placeholder='name', id='name')
+          div.form-group
+            label(for='comment') Comment:
+            input(type='text', placeholder='Add a comment', id='comment')
+          div.form-group
+            input(type='button', value="Send", id="addComment")
+
+          script.
+            $('#addComment').click(function () {
+              var comment = {
+                "author": $('#name').val(),
+                "content": $('#comment').val()
+              }
+              $.ajax({
+                url: `http://localhost:7000/post/${#{post.id}}/comment`,
+                type: 'POST',
+                data: comment,
+                success: function () {
+                  location.reload()
+                },
+                error: function (error) {
+                  console.log(error)
+                }
+              });
+            });
+
+      p #[a(href='/') Back to Home]

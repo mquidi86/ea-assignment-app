@@ -1,0 +1,8 @@
+{
+  "restartable": "rs",
+  "watch": [
+    "apiRest.js",
+    "server.js"
+  ],
+  "ext": "js json"
+}
