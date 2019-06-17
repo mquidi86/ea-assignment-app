@@ -10,6 +10,6 @@ COPY * /app/
 
 WORKDIR /app
 
-CMD ["npm", "install"]
+RUN npm install
 
-CMD ["npm", "start"]
+RUN npm start
