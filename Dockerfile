@@ -6,7 +6,7 @@ EXPOSE 7000
 
 EXPOSE 8000
 
-COPY * /app/
+COPY . /app/
 
 WORKDIR /app
 
