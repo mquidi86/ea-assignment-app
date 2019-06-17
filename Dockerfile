@@ -8,6 +8,8 @@ EXPOSE 8000
 
 COPY * /app/
 
+WORKDIR /app
+
 CMD ["npm", "install"]
 
 CMD ["npm", "start"]
